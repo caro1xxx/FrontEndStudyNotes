@@ -1,0 +1,1 @@
+> npm config get registry

@@ -1,0 +1,1 @@
+> 编辑`browserslist`配置时，您可能会注意到您的更改不会立即被生效。这是由于[babel-loader 中的一个问题](https://github.com/babel/babel-loader/issues/690)没有检测到您的`package.json`. 一个快速的解决方案是删除该`node_modules/.cache`文件夹并重试。

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <p>用户名</p>
+    <input type="text" name="" id="username">
+    <p>密码</p>
+    <input type="password" name="" id="password">
+  </form>
+</body>
+<script>
+  /* 
+    在实际开发中,策略模式中的封装算法,那么就可以理解为封装"业务逻辑"
+    把一系列的逻辑封装起来
+  */
+  /* 
+    简单实现 表单校验
+  */
+  let validation = {
+    'valiLength':function (elem){
+      return elem.value.length>10;
+    },
+    'valiContent':function (elem){
+      return elem.value.indexOf('a')>=0;
+    }
+  }
+
+  function formVali (type,elem){
+    return validation[type](elem);
+  }
+
+
+
+  let form = document.querySelector('form')
+  formVali('valiContent',form['username']) //验证用户名是否包含'a'
+  formVali('valiLength',form['password']) //验证密码长度
+
+</script>
+</html>

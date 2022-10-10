@@ -1,0 +1,2 @@
+sudo apt remove iio-sensor-proxy
+之后注销再登录

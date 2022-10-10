@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+/* 
+  单例模式核心:确保只有一个实例,并提供全局访问
+  常用的var类似单例,但是它对全局环境造成了污染
+  原理:
+    使用变量把实例存起来,如果下次再调用实例就用缓存起来的实例
+*/
+  let Temp = function (name){
+    this.name = name;
+  }
+
+  Temp.prototype.getName = function (name){
+    console.log(this.name);
+  }
+
+  Temp.getInstance = function( name ){ 
+    if ( this.instance ){ 
+        this.instance = new Temp( name ); 
+    } 
+    return this.instance; 
+};
+
+  let p1 = Temp.getInstance('jack') //jack
+  let p2 = Temp.getInstance('lucy') //jack
+  console.log(p2==p1); //true
+
+</script>
+
+</html>
