@@ -16,6 +16,5 @@ class Index extends Component {
 }
 
 export default Index;
-
 ```
 
