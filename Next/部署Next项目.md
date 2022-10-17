@@ -18,6 +18,25 @@
 pm2 start npm --name "你的项目名称" -- run start
 ```
 
+默认启动的地址为127.0.0.1:3000
+
+最后配置nginx进行转发
+
+```js
+server{
+  //监听外网80端口
+    listen 80;
+    server_name xxx.com
+    location / {
+      //转发到pm2所启动next项目
+        proxy_pass http://localhost:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real_IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+```
+
 
 
 pm2命令
