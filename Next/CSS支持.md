@@ -59,3 +59,9 @@ npm install sass
 
 **支持任何现有的 CSS-in-JS 解决方案**
 
+使用styled-compoents
+
+```bahs
+npx create-next-app --example with-styled-components with-styled-components-app
+```
+
