@@ -12,6 +12,8 @@ npm install -g tsdx
 npx tsdx create [包名]
 ```
 
+选择react即可
+
 #### 下载依赖
 
 * 根目录下进行npm install
