@@ -12,6 +12,8 @@
 
 第三步下载pm2,这是一个类似于uwsgi的东西(pm2可以通过npm install下载)
 
+下载好pm2之后需要配置环境path
+
 第四步执行命令
 
 ```bash
